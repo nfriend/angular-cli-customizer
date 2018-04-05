@@ -46,6 +46,6 @@ Other than that, the `cng` command is simply a wrapper for the `ng` command.
 
 ## Isn't this a hack?
 
-Yep. It depends on internal implementation details of the CLI, which could change during any update.  Hopefully a better customization solution will be eventually be released 
+Yep. It depends on internal implementation details of the CLI, which could change during any update of the `@angular/cli` package.  Hopefully a better customization solution will be eventually be built into the CLI.
 
 
