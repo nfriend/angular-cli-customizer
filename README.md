@@ -50,6 +50,12 @@ This module does some acrobatics (modifying the `require` function) to surgicall
 
 Other than that, the `cng` command is simply a wrapper for the `ng` command.
 
+## How do I know what to modify?
+
+If you run [`ng eject`](https://github.com/angular/angular-cli/wiki/eject), the Angular CLI will create a `webpack.config.js` file at the root of your project's directory that contains the configuration it uses at runtime. You can use this file as a reference when designing your own `webpack.config.js` file that will augment this configuration.
+
+Note that running `ng eject` prevents the usage of some CLI features; to "uneject", delete the generated `webpack.config.js` and [flip the `ejected` property to `false` in your project's `.angular.cli.json`](https://stackoverflow.com/a/43026220/1063392).
+
 ## Isn't this a hack?
 
 Yep. It depends on internal implementation details of the CLI, which could change during any update of the `@angular/cli` package.  Hopefully a better customization solution will be eventually be built into the CLI.
