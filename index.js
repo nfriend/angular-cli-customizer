@@ -60,7 +60,7 @@ if (customWebpackConfig) {
 
 // Now that we have our custom require() function set up the way we want,
 // find the location of the Angular CLI's entry point and start the CLI
-var angularCliBasePath = gmp.getPath('@angular/cli234');
+var angularCliBasePath = gmp.getPath('@angular/cli');
 if (!angularCliBasePath) {
     console.error(
         chalk.red(
