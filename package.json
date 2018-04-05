@@ -1,6 +1,6 @@
 {
   "name": "angular-cli-customizer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A small command-line Node module that allows Angular CLI's Webpack config file to be customized",
   "main": "index.js",
   "scripts": {
