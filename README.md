@@ -24,7 +24,7 @@ module.exports = {
 };
 ```
 
-2. Use the command line interface exposed by this module - `cng` - exactly as you would with the `@angular/cli` module (`ng`):
+2. Use the command line interface exposed by this module - `cng` (think "customized" `ng`) - exactly as you would with the `@angular/cli` module (`ng`):
 
 ```bash
 cng serve --open
