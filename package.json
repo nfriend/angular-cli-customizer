@@ -1,0 +1,39 @@
+{
+  "name": "angular-cli-customizer",
+  "version": "1.0.0",
+  "description": "A small command-line Node module that allows Angular CLI's Webpack config file to be customized",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "cng": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nfriend/angular-cli-customizer.git"
+  },
+  "keywords": [
+    "angular",
+    "cli",
+    "webpack",
+    "config",
+    "customize",
+    "edit",
+    "extend"
+  ],
+  "author": "Nathan Friend",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nfriend/angular-cli-customizer/issues"
+  },
+  "homepage": "https://github.com/nfriend/angular-cli-customizer#readme",
+  "dependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/lodash": "^4.14.106",
+    "chalk": "^2.3.2",
+    "findup": "^0.1.5",
+    "global-modules-path": "^2.1.0",
+    "lodash": "^4.17.5"
+  }
+}
