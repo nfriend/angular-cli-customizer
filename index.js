@@ -2,7 +2,9 @@
 'use strict';
 
 var path = require('path');
+var fs = require('fs');
 var gmp = require('global-modules-path');
+var yarnModulesPath = require('yarn-global-modules');
 var chalk = require('chalk');
 var mergeConfigs = require('./merge-configs');
 var getCustomWebpackConfig = require('./get-custom-webpack-config');
@@ -61,6 +63,10 @@ if (customWebpackConfig) {
 // Now that we have our custom require() function set up the way we want,
 // find the location of the Angular CLI's entry point and start the CLI
 var angularCliBasePath = gmp.getPath('@angular/cli');
+if (!angularCliBasePath) {
+    var candidatePath = path.join(yarnModulesPath(), 'node_modules/@angular/cli');
+    angularCliBasePath = fs.existsSync(candidatePath) && candidatePath;
+}
 if (!angularCliBasePath) {
     console.error(
         chalk.red(
