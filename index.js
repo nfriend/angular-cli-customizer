@@ -67,13 +67,19 @@ if (!angularCliBasePath) {
     var candidatePath = path.join(yarnModulesPath(), 'node_modules/@angular/cli');
     angularCliBasePath = fs.existsSync(candidatePath) && candidatePath;
 }
+
 if (!angularCliBasePath) {
-    console.error(
-        chalk.red(
-            "Couldn't find the global installation of the Angular CLI... is it installed?\n" + 
-            'You can install the CLI globally using "npm install @angular/cli -g"'
-        )
-    );
+    try {
+        //try locally once before erroring
+        require('@angular/cli/bin/ng')
+    } catch(e) {
+        console.error(
+            chalk.red(
+                "Couldn't find the global or local installation of the Angular CLI... is it installed?\n" + 
+                'You can install the CLI globally using "npm install @angular/cli -g"'
+            )
+        );
+    }
 } else {
     var angularCliPath = path.join(angularCliBasePath, 'bin/ng');
 
